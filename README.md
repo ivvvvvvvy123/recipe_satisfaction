@@ -34,6 +34,14 @@ goal find normal distribution of number of steps and length of time for recipe
 
 ## Hypothesis Testing
 
+Part 1 Step 4:
+1st hypothesis
+- null : The distribution of minutes is not correlated with the number of steps
+- alternative : The distribution of minutes is positively correlated with the number of steps
+- columns : ["n_steps","minutes"]
+- test statistic : absolute mean difference (comparing the recipe ratings with and without the tag)
+
+
 
 (see 12/8 notebook)
 

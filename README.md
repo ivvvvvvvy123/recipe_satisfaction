@@ -1,3 +1,9 @@
+food_interim["review"],food_interim["description"],food_interim["n_steps"],
+
+print(interactions_r[['recipe_id', 'rating']].head().to_markdown(index=False))
+
+
+
 ## introduction
 
 To use effective study strategies or to make another ramen noodle pack.
@@ -13,10 +19,8 @@ then you realize souffle probably isn't a weekend meal. Ergo we
 
 
 
-insert code here?
 
-
-Box plot of ‘minutes’ and ‘n_steps’ after cleanup the ‘minutes’ to a range of 1-120
+conducted outlier removal on food[minutes] present in the dataset 
 
 
 
@@ -25,16 +29,20 @@ you found the 2nd step in creating a github webpage
 heres an example of entire website written in markdown
 
 goal find normal distribution of number of steps and length of time for recipe
-|   recipe_id |   rating |
-|------------:|---------:|
-|       40893 |        5 |
-|       85009 |        5 |
-|       85009 |        5 |
-|      120345 |        0 |
-|      120345 |        2 |
+|   recipe_id |   minutes |   n_steps |
+|------------|----------|----------|
+|      306785 |        40 |         4 |
+|      310237 |        30 |         9 |
+|      321038 |        22 |        14 |
+|      321038 |        22 |        14 |
+|      342209 |        40 |         7 |
+
+insert code here for IQR or just say so?
 
 
-
+## Univariate Analysis
+Look at the distributions of relevant columns separately by using DataFrame operations and drawing at least two relevant plots.
+Embed at least one plotly plot you created in your notebook that displays the distribution of a single column (see Part 2: Report for instructions). Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present. (Your notebook will likely have more visualizations than your website, and that’s fine. Feel free to embed more than one univariate visualization in your website if you’d like, but make sure that each embedded plot is accompanied by a description.)
 
 
 
@@ -65,12 +73,22 @@ Part 1 Step 4:
 (see 12/8 notebook)
 
 ## Framing a Prediction Prediction
+ 
+We plan to be able to predict the minutes the recipe would take and thus is regression problem due to continous numerical behavior present. Also due to finding variances in recipes when only conducting analysis on one variable for example n_steps and minutes vizualiation. Yet also recognizing abnormalbity in other plots thus suggesting that skill of reviewer may be coming into play. Therefore meaning implications of how the reviewer is viewing (food["descripition"]) can provide insight to what they are predisposed to believe of quality expected from the minutes from the recipe.
 
+The score will use is accuracy due to the minutes produced by the model being the same units as the original dataset but standarized.
 
 ## Baseline Model
+
 only add a written part with scores (😭)
 
 ## Final Model
+Arriving at practical computation limits the only features that we're possible to add on any computer that I tried was tags and description. 
+Ingredients, nutrition , and for some reason steps weren't able to work under the multilabelbinarizer which in practice was simply a binary matrix but optimized for entry values with lists of data ["60 minutes", "15 minutes" ] etc. Although the model was able to train the all the tags alll of them being included would be shortsighted to the implications of colinearity due our being to predict the minutes or in other words if have variable that classifies the time. **Random Forest** may be able to make use of this fact due to the intervals of time suggested by the tags allowing for prediction that may be better suited for further iterations of the model.
+
+Description was also included due to the behavior we have witnessed earlier of the missingingness presented in the providing insight into the opinions of the participants who were reviewed. 
+
+scores : 
 
 
 in the example final they used segments of the tags they had cleaneed

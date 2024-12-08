@@ -6,6 +6,7 @@ When you're doomscrolling and finding a good recipe thinking one day you'll make
 then you realize souffle probably isn't a weekend meal. Ergo we 
 
 
+## Data Cleaning and Exploratory Data Analysis
 
 
 
@@ -23,3 +24,32 @@ goal find normal distribution of number of steps and length of time for recipe
 |       85009 |        5 |
 |      120345 |        0 |
 |      120345 |        2 |
+
+
+
+
+## Assessment of Missingness
+
+(see 12/4 notebook)
+
+## Hypothesis Testing
+
+
+(see 12/8 notebook)
+
+## Framing a Prediction Prediction
+
+
+## Baseline Model
+only add a written part with scores (😭)
+
+## Final Model
+
+
+in the example final they used segments of the tags they had cleaneed
+
+so 
+
+## Fairness Analysis
+
+

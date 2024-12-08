@@ -37,7 +37,7 @@ goal find normal distribution of number of steps and length of time for recipe
 |      321038 |        22 |        14 |
 |      342209 |        40 |         7 |
 
-insert code here for IQR or just say so?
+
 
 
 ## Univariate Analysis
@@ -47,6 +47,9 @@ Embed at least one plotly plot you created in your notebook that displays the di
 
 
 ## Assessment of Missingness
+
+
+missingness columns : review, name, descripition
 
 
 Review: MAR: Since there are 57 missing review, and the mean value of the rating is 4.7(quite high), so we guess most people are satisfied with the recipe and they feel no need to elaborate on their positive experience.
@@ -80,9 +83,48 @@ The score will use is accuracy due to the minutes produced by the model being th
 
 ## Baseline Model
 
+
+
+
+
+# random forest (reason : lots of rows to tree on ) decision tree regression 
+# ( dependent minutes may need to do a mixed approach due to drive space?)
+
+
+# TODO 
+# columns(features) for model
+
+    # one hot tags | done
+    # stdscaler 
+    #
+        # n_steps    
+        # n_ingredients
+    # tags
+    # description (std scaler the values from the log?)
+    # steps?
+# decision tree viz for minutes given the attributes
+
+# present accuracy and precision
+# get the random forest regressor to work
+# train with entropy(cv) the decision tree regressor
+
+# TODO on next meet
+# fairness & final model 
+
+# 
+
+
+
+
+
+
+
 only add a written part with scores (😭)
 
 ## Final Model
+
+
+# lists_eval = ["tags","description"]
 Arriving at practical computation limits the only features that we're possible to add on any computer that I tried was tags and description. 
 Ingredients, nutrition , and for some reason steps weren't able to work under the multilabelbinarizer which in practice was simply a binary matrix but optimized for entry values with lists of data ["60 minutes", "15 minutes" ] etc. Although the model was able to train the all the tags alll of them being included would be shortsighted to the implications of colinearity due our being to predict the minutes or in other words if have variable that classifies the time. **Random Forest** may be able to make use of this fact due to the intervals of time suggested by the tags allowing for prediction that may be better suited for further iterations of the model.
 

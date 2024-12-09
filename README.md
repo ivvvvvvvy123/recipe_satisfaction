@@ -137,6 +137,12 @@ in the example final they used segments of the tags they had cleaneed
 
 so 
 
+y=food_cleaned
+Standard normalized: n_steps, n_ingredients, number of tags, 
+vectorized description
+One_hot encoding: rating tags
+
+
 ## Fairness Analysis
 
 

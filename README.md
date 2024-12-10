@@ -29,6 +29,8 @@ you found the 2nd step in creating a github webpage
 heres an example of entire website written in markdown
 
 goal find normal distribution of number of steps and length of time for recipe
+
+
 |   recipe_id |   minutes |   n_steps |
 |------------|----------|----------|
 |      306785 |        40 |         4 |
@@ -122,6 +124,9 @@ The score will use is accuracy due to the minutes produced by the model being th
 only add a written part with scores (😭)
 
 ## Final Model
+
+obvious short comings of decision tree regressor on display overfitting :(
+
 
 
 # lists_eval = ["tags","description"]

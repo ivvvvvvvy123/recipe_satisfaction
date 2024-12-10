@@ -88,31 +88,31 @@ The score will use is accuracy due to the minutes produced by the model being th
 
 
 
-# random forest (reason : lots of rows to tree on ) decision tree regression 
-# ( dependent minutes may need to do a mixed approach due to drive space?)
+random forest (reason : lots of rows to tree on ) decision tree regression 
+( dependent minutes may need to do a mixed approach due to drive space?)
 
 
-# TODO 
-# columns(features) for model
+TODO 
+columns(features) for model
 
-    # one hot tags | done
-    # stdscaler 
-    #
-        # n_steps    
-        # n_ingredients
-    # tags
-    # description (std scaler the values from the log?)
-    # steps?
-# decision tree viz for minutes given the attributes
+    one hot tags | done
+    stdscaler 
+    
+        n_steps    
+        n_ingredients
+    tags
+    description (std scaler the values from the log?)
+    steps?
+decision tree viz for minutes given the attributes
 
-# present accuracy and precision
-# get the random forest regressor to work
-# train with entropy(cv) the decision tree regressor
+present accuracy and precision
+get the random forest regressor to work
+train with entropy(cv) the decision tree regressor
 
-# TODO on next meet
-# fairness & final model 
+TODO on next meet
+	fairness & final model 
 
-# 
+
 
 
 

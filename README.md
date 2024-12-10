@@ -89,8 +89,9 @@ The score will use is accuracy due to the minutes produced by the model being th
 Taking inspriation from the example for the same we arrived that feature(defined as one column)
 that the columns containing strings of lists in python syntax would prove to be most insightful
 for arriving at thought provoking predictions. First foremost we would need conduct a tad bit more
-of data cleaning before being able to add features in the same vain 
-	"""python
+of data cleaning before being able to add features in the same vain
+ 
+	```python3
 	
 	
 	import ast
@@ -98,7 +99,8 @@ of data cleaning before being able to add features in the same vain
 		# Convert the string representation of the list to an actual list
 		return ast.literal_eval(tags)
 	
-	"""
+	```
+
 After doing so we choose to make arrived at the best model to use would be random forest regressor
 due to the desired initutiive nature of interpreting how the features would be represented in our 
 output due to our choosen encoding of MulitLabelBinarizer although the name suggests on the surface 

@@ -128,7 +128,7 @@ obvious short comings of decision tree regressor on display overfitting :(
 
 
 
-# lists_eval = ["tags","description"]
+lists_eval = ["tags","description"]
 Arriving at practical computation limits the only features that we're possible to add on any computer that I tried was tags and description. 
 Ingredients, nutrition , and for some reason steps weren't able to work under the multilabelbinarizer which in practice was simply a binary matrix but optimized for entry values with lists of data ["60 minutes", "15 minutes" ] etc. Although the model was able to train the all the tags alll of them being included would be shortsighted to the implications of colinearity due our being to predict the minutes or in other words if have variable that classifies the time. **Random Forest** may be able to make use of this fact due to the intervals of time suggested by the tags allowing for prediction that may be better suited for further iterations of the model.
 

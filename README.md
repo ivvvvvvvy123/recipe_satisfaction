@@ -85,6 +85,34 @@ The score will use is accuracy due to the minutes produced by the model being th
 ## Baseline Model
 
 
+- Framing journey
+Taking inspriation from the example for the same we arrived that feature(defined as one column)
+that the columns containing strings of lists in python syntax would prove to be most insightful
+for arriving at thought provoking predictions. First foremost we would need conduct a tad bit more
+of data cleaning before being able to add features in the same vain 
+	"""python
+	
+	
+	import ast
+	def clean_str_to_list(tags):
+		# Convert the string representation of the list to an actual list
+		return ast.literal_eval(tags)
+	
+	"""
+After doing so we choose to make arrived at the best model to use would be random forest regressor
+due to the desired initutiive nature of interpreting how the features would be represented in our 
+output due to our choosen encoding of MulitLabelBinarizer although the name suggests on the surface 
+to be same aforementioned Binarizer as found in lecture. The documentation and actually application to
+dataset has more in column with OneHotEncoder. Applying a OneHot encode to the what would be all the items
+found in the list. At first not having specific input in mind to arrive at accurately predicting the number of
+minutes for the recipe. Although the methodology for what feature to include for prediction may not have been
+as deliberate as the study that originates the data we still learned a very practical approach of trial and 
+error for the encode to even process of course there would've been ways to encode other features
+similiar to "tags" we desired to not conduct any data truncation in the name of portablility. Also 
+due to computationally limitations even explicit nested features being dropped such as what the orignal study
+did with all the "indgredients" found not being included in their model.
+	
+
 
 
 
@@ -94,17 +122,15 @@ random forest (reason : lots of rows to tree on ) decision tree regression
 
 TODO 
 columns(features) for model
-
-    one hot tags | done
-    stdscaler 
+    - one hot tags | done
+    - stdscaler 
     
-        n_steps    
-        n_ingredients
-    tags
-    description (std scaler the values from the log?)
-    steps?
+        - n_steps    
+        - n_ingredients
+    - tags
+    - description (std scaler the values from the log?)
+    - steps?
 decision tree viz for minutes given the attributes
-
 present accuracy and precision
 get the random forest regressor to work
 train with entropy(cv) the decision tree regressor

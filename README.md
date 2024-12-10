@@ -31,14 +31,13 @@ heres an example of entire website written in markdown
 goal find normal distribution of number of steps and length of time for recipe
 
 
-|   recipe_id |   minutes |   n_steps |
-|------------|----------|----------|
-|      306785 |        40 |         4 |
-|      310237 |        30 |         9 |
-|      321038 |        22 |        14 |
-|      321038 |        22 |        14 |
-|      342209 |        40 |         7 |
-
+| recipe_id | minutes | n_steps |
+|-----------|---------|---------|
+| 306785    | 40      | 4       |
+| 310237    | 30      | 9       |
+| 321038    | 22      | 14      |
+| 321038    | 22      | 14      |
+| 342209    | 40      | 7       |
 
 
 

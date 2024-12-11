@@ -422,7 +422,7 @@ We are interested in what may affect, or correlate, the cooking complexity, we w
 Our result shows, the p-value is approximately 0 and r is positive, which rejects the null hypothesis. The correlation coefficent r is around 0.43, which is a moderately positive relationship between cooking time and the steps, meaning cooking time may also correlate with other features, so our next step is to incorporate more features to predict the cooking time, which will be elaborate in step 5. 
 
 
-## Framing a Prediction Prediction
+## Framing a Prediction Problem
  
 We try to address a regression problem: predicting cooking times(‘minutes’ column) using different features from the dataset. This prediction problem aligns with the part we interest, time is a crucial aspect of recipe reparatoin that users may want to estimate based on recipe features. To address this, we will utilize the decision tree regressor because Decision trees are highly interpretable and capable of captureing complicated features, which works on our dataset having many different columns(18). Besides, considering the missingness analysis we did before, our data is flawed in completeness, so choosing decision tree is a great choice because it can split data without imputation needed. Moreover, decision trees are robust to outliers and random noise, making our data more generalized.
 

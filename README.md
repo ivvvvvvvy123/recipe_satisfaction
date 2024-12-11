@@ -208,13 +208,7 @@ heres an example of entire website written in markdown
 goal find normal distribution of number of steps and length of time for recipe
 
 
-| recipe_id | minutes | n_steps |
-|-----------|---------|---------|
-| 306785    | 40      | 4       |
-| 310237    | 30      | 9       |
-| 321038    | 22      | 14      |
-| 321038    | 22      | 14      |
-| 342209    | 40      | 7       |
+
 
 
 
@@ -255,7 +249,6 @@ Look at the distributions of relevant columns separately by using DataFrame oper
 Embed at least one plotly plot you created in your notebook that displays the distribution of a single column (see Part 2: Report for instructions). Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present. (Your notebook will likely have more visualizations than your website, and that’s fine. Feel free to embed more than one univariate visualization in your website if you’d like, but make sure that each embedded plot is accompanied by a description.)
 
 We conduct box plots for the column minutes and to have a peek of the distribution over all, and the result demonstrates that the range is too large, from 0 to 1 million, confirming the need of outliers removal we did above. The cleaned distribution is shown in the next graph. Now the range of the minutes is from 0 to 120.
-<need uni_box>
 
 <img src="assets/univariate_hist_minutes.png" alt="univar plot" />
 The histogram reveals a right skewed trend, hinting most recipes are quick and some of them are designed for elaborate cooking processes.

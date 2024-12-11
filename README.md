@@ -196,54 +196,6 @@ All the columnns of the cleaned df include:
 </table>
 
 
-
-conducted outlier removal on food[minutes] present in the dataset 
-
-
-
-
-you found the 2nd step in creating a github webpage
-heres an example of entire website written in markdown
-
-goal find normal distribution of number of steps and length of time for recipe
-
-
-
-
-
-
-| rating   |    0 |   1 |   2 |   3 |    4 |     5 |
-|----------| -----|-----|-----|-----|------|-------|
-| 1        |  123 |  22 |  18 |  65 |  416 |  1971 |
-| 2        |  319 |  54 |  39 | 172 | 1060 |  5321 |
-| 3        |  504 | 104 |  83 | 271 | 1663 |  8092 |
-| 4        |  679 | 136 |  88 | 353 | 2080 |  9999 |
-| 5        |  880 | 185 | 154 | 522 | 2736 | 11424 |
-| 6        |  952 | 201 | 158 | 549 | 2883 | 12555 |
-| 7        | 1099 | 182 | 178 | 578 | 3045 | 13430 |
-| 8        |  996 | 183 | 159 | 523 | 2972 | 12688 |
-| 9        | 1082 | 202 | 166 | 550 | 2761 | 12003 |
-| 10       |  947 | 189 | 185 | 492 | 2457 | 10558 |
-| 11       |  793 | 167 | 132 | 370 | 2012 |  9011 |
-| 12       |  750 | 146 | 126 | 312 | 1826 |  7980 |
-| 13       |  510 | 107 |  77 | 244 | 1470 |  6499 |
-| 14       |  436 | 110 |  79 | 254 | 1190 |  5626 |
-| 15       |  433 |  80 |  66 | 195 |  963 |  4529 |
-| 16       |  425 |  66 |  66 | 166 |  771 |  3959 |
-| 17       |  367 |  55 |  48 | 138 |  634 |  3304 |
-| 18       |  254 |  44 |  29 |  87 |  541 |  2331 |
-| 19       |  214 |  30 |  35 |  79 |  382 |  2080 |
-| 20       |  204 |  30 |  28 |  68 |  379 |  1952 |
-| 21       |  143 |  30 |  19 |  55 |  252 |  1395 |
-| 22       |   88 |  18 |  19 |  49 |  194 |  1051 |
-| 23       |  116 |  19 |   9 |  42 |  174 |  1045 |
-| 24       |   89 |  11 |   9 |  25 |  117 |   615 |
-| 25       |   78 |  16 |  18 |  28 |  108 |   594 |
-| 26       |   51 |  13 |   5 |  31 |   87 |   446 |
-| 27       |   
-
-
-
 ## Univariate Analysis
 Look at the distributions of relevant columns separately by using DataFrame operations and drawing at least two relevant plots.
 Embed at least one plotly plot you created in your notebook that displays the distribution of a single column (see Part 2: Report for instructions). Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present. (Your notebook will likely have more visualizations than your website, and that’s fine. Feel free to embed more than one univariate visualization in your website if you’d like, but make sure that each embedded plot is accompanied by a description.)

@@ -392,13 +392,13 @@ Descriptions: The median cooking time increases with recipe complexity, and the 
 
 As the series shows below, we have five columns containing missing values, including 'rating','review','name', 'description' and 'average_rating'. 
 
-### NMAR Analysis
+## NMAR Analysis
 - **Average_rating**: Since 'average_rating' comes from 'rating', the missingness of 'average_rating' is highly correlated with another column, so its missingness should be 'MAR'(Missing At Random).
 - **Review**: NMAR: Since there are 57 missing review, because people are less likely to leave comments if they are unsatisfied with the food or they have neutral feelings toward it. Name: MCAR; This is missed by accident because there is only one row over 234428 recipes, and it is possible the people just forget to put the name in.
 - **Description**: MAR; since other columns are already enough to get the detail of the recipe, so adding more description may be necessary, but we will prove it in the next section.
 - **Rating**: MAR; Rating is the missing part because we manually change 0 to np.nan to let it represent missing. We guess rating is missing due to other columns like n_steps based on the positive correlation we demonstrated in the bivariate analysis.
 - 
-### Missingness Dependency
+## Missingness Dependency
 - Null hypothesis: description is independent
 - Alternative hypothesis: description depends other columns
 - Test statistic: difference in mean

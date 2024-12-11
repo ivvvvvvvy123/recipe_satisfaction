@@ -305,7 +305,31 @@ One_hot encoding: rating tags
 ## Fairness Analysis
 
 
+We have conducted a fairness analysis on the final model using a permutation test on the Root Mean Squared Error (RMSE) and R^2 evaluation metrics. The analysis aims to answer the question: "Does the model perform worse for recipes with fewer ingredients (Group X) compared to recipes with more ingredients (Group Y)?"
 
+The choice of groups, hypotheses, test statistic, and significance level are as follows:
+
+Group X: Recipes with fewer than 5 ingredients.
+Group Y: Recipes with 5 or more ingredients.
+Hypotheses
+For RMSE:
+
+Null Hypothesis (H0): The RMSE for Group X and Group Y is approximately the same.
+Alternative Hypothesis (Ha): The RMSE for Group X is higher than for Group Y.
+For R^2:
+
+Null Hypothesis (H0): The R^2 for Group X and Group Y is approximately the same.
+Alternative Hypothesis (Ha): The R^2 for Group X is lower than for Group Y.
+Test Statistic: Difference in RMSE (ΔRMSE) or R^2 (ΔR^2) between Group X and Group Y.
+
+Significance Level (α): 0.05.
+
+Results
+Observed RMSE Difference: -35.19709718906216
+Observed R^2 Difference: 139.86422398687952
+P-value for RMSE: 0.0 (We reject the null hypothesis for RMSE, indicating potential unfairness.)
+P-value for R^2: 0.0 (We reject the null hypothesis for R^2, indicating potential unfairness.)
+Given the results, we have evidence to suggest that the model performs worse for recipes with fewer ingredients (Group X) compared to recipes with more ingredients (Group Y). This indicates potential unfairness in the model's performance.
 
 
 

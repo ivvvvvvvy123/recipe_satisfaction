@@ -1,9 +1,3 @@
-food_interim["review"],food_interim["description"],food_interim["n_steps"],
-
-print(interactions_r[['recipe_id', 'rating']].head().to_markdown(index=False))
-
-
-
 ## introduction
 
 Recipe and rating is an important reference when we making food, providing reliable indication of the food quality and taste, as well as the energy and complexity to finish cooking. Time, in nowadays, becomes more crutIal when people live in such a high speed life, so understanding what factors are correlate with it is one question we are interested in. In our project, we focus on how to predict the cooking time(minutes) utilizing different categorical, numerical, and textual features. Our model tries to use statistical analysis method, including permutation test, hypothesis tests and the missing data analysis to conduct the exploratory analysis. We also build decision tree regressor to predict the detailed relationship between them. Overall, this project aims to shine light on how to make people more efficient cooking food with viable time management.  
@@ -67,8 +61,39 @@ Recipe and rating is an important reference when we making food, providing relia
   </tbody>
 </table>
 
+The second dataset interactions have 731927 rows and 5 columns.
+<table border="1" style="border-collapse: collapse; width: 100%; text-align: left;">
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>user_id</td>
+      <td>user ID</td>
+    </tr>
+    <tr>
+      <td>recipe_id</td>
+      <td>Recipe ID</td>
+    </tr>
+    <tr>
+      <td>Date</td>
+      <td>Date of interaction</td>
+    </tr>
+    <tr>
+      <td>Rating</td>
+      <td>Rating given</td>
+    </tr>
+    <tr>
+      <td>Review</td>
+      <td>Review text</td>
+    </tr>
+  </tbody>
+</table>
 
-
+The two Dataframe both have recipe_id(id) and also the columns we are interested in, including ’n-steps’, ’n-ingredidents’, ‘tags’ and ‘description’. Specifically, the dataset has a strong skewed trend of the features, even include our interesting factors, so to better capture the most data we need to clean the dataset and focus on the main part of them.
 ## Data Cleaning and Exploratory Data Analysis
 
 

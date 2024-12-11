@@ -201,7 +201,7 @@ Embed at least one plotly plot you created in your notebook that displays the di
 
 <img src="assets/univariate_hist_minutes.png" alt="univar plot" />
 
-
+## Bivariate Analysis
 
 <img src="assets/plotly_bivariate_whisker.png" alt="univar plot" />
 

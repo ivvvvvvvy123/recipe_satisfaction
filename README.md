@@ -280,10 +280,10 @@ As the series shows below, we have five columns containing missing values, inclu
 
 When we try to run permutation test on a different column, minutes for description, we found that the p_value is 0.66 which is too high for a significant value of 0.05, so we conclude that the missingness of description does not depend on minutes.
 
-<Number of ingredients by Missingness of description(MAR)>
+<img src="assets/ingredients_Missingness.png" alt="univar plot" />
 From the graph, we can see that number of ingredients’ distribution is generally similar between the missing description and the non-missing description, and since the p_value is quite low, we predict that there is still significant relationship between these two columns. The interesting part of the graph is the curly shifting part, with recipes missing descriptions having higher density at lower ingredient counts. Moreover,since the density is decreasing as we increase the number of ingredients, there might be a weak negative relationship.
 
-<Minutes of cooking by Missingness of description(MAR)>
+<img src="assets/cooking_missingness.png" alt="univar plot" />
 From this graph, the distribution of cooking minutes appear similar with the missing descriptions and non-missing descriptions, indicating a minor difference between he missingness and the time, so align with the high p-value(0.6), indicating that the observed difference may come from randomness. There is no correlation with the cooking time.
 
 

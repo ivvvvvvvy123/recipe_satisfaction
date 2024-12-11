@@ -6,10 +6,67 @@ print(interactions_r[['recipe_id', 'rating']].head().to_markdown(index=False))
 
 ## introduction
 
-To use effective study strategies or to make another ramen noodle pack.
-A personal problem of mine at least(Felix) is finding the time to cook at home.
-When you're doomscrolling and finding a good recipe thinking one day you'll make it
-then you realize souffle probably isn't a weekend meal. Ergo we 
+Recipe and rating is an important reference when we making food, providing reliable indication of the food quality and taste, as well as the energy and complexity to finish cooking. Time, in nowadays, becomes more crutIal when people live in such a high speed life, so understanding what factors are correlate with it is one question we are interested in. In our project, we focus on how to predict the cooking time(minutes) utilizing different categorical, numerical, and textual features. Our model tries to use statistical analysis method, including permutation test, hypothesis tests and the missing data analysis to conduct the exploratory analysis. We also build decision tree regressor to predict the detailed relationship between them. Overall, this project aims to shine light on how to make people more efficient cooking food with viable time management.  
+
+<table border="1" style="border-collapse: collapse; width: 100%; text-align: left;">
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Name of recipe</td>
+    </tr>
+    <tr>
+      <td>Id</td>
+      <td>Recipe id</td>
+    </tr>
+    <tr>
+      <td>Minutes</td>
+      <td>Time to cook</td>
+    </tr>
+    <tr>
+      <td>Contributor_id</td>
+      <td>User id who uploaded the recipe</td>
+    </tr>
+    <tr>
+      <td>Submitted</td>
+      <td>Date recipe was uploaded</td>
+    </tr>
+    <tr>
+      <td>Tags</td>
+      <td>Food.com tags for recipe</td>
+    </tr>
+    <tr>
+      <td>Nutrition</td>
+      <td>Nutrition information (calories, total fat, sugar, sodium, protein, saturated fat, etc.)</td>
+    </tr>
+    <tr>
+      <td>N-steps</td>
+      <td>Number of steps to cook</td>
+    </tr>
+    <tr>
+      <td>Steps</td>
+      <td>Text for recipe steps in order</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>User-provided description</td>
+    </tr>
+    <tr>
+      <td>Ingredients</td>
+      <td>Text for recipe ingredients</td>
+    </tr>
+    <tr>
+      <td>N-ingredients</td>
+      <td>Number of ingredients in recipe</td>
+    </tr>
+  </tbody>
+</table>
+
 
 
 ## Data Cleaning and Exploratory Data Analysis

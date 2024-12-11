@@ -53,7 +53,7 @@ Embed at least one plotly plot you created in your notebook that displays the di
 missingness columns : review, name, descripition
 
 
-Review: MAR: Since there are 57 missing review, and the mean value of the rating is 4.7(quite high), so we guess most people are satisfied with the recipe and they feel no need to elaborate on their positive experience.
+Review: MAR: Since there are 57 missing reviews, and the mean value of the rating is 4.7(quite high), most people are satisfied with the recipe and feel no need to elaborate on their positive experience.
 Name: MAR; This is missed by accident because there is only one row over 234428 recipes, and it is possible the people just forget to put the name in.
 Description: MAR; since other columns are already enough to get the detail of the recipe, so adding more description may be necessary
 
@@ -86,7 +86,7 @@ The score will use is accuracy due to the minutes produced by the model being th
 
 
 - Framing journey
-Taking inspriation from the example for the same we arrived that feature(defined as one column)
+Taking inspiration from the example for the same we arrived at that feature(defined as one column)
 that the columns containing strings of lists in python syntax would prove to be most insightful
 for arriving at thought provoking predictions. First foremost we would need conduct a tad bit more
 of data cleaning before being able to add features in the same vain
@@ -118,7 +118,7 @@ did with all the "indgredients" found not being included in their model.
 
 
 
-random forest (reason : lots of rows to tree on ) decision tree regression 
+random forest (reason: lots of rows to tree on ) decision tree regression 
 ( dependent minutes may need to do a mixed approach due to drive space?)
 
 
@@ -176,5 +176,9 @@ One_hot encoding: rating tags
 
 
 ## Fairness Analysis
+
+
+
+
 
 

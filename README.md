@@ -314,6 +314,21 @@ Features we plan to incorporate in the model:
 
 ## Baseline Model
 
+Model evaluation: For the baseline model, we decide to use features that are more straightforward and easy to fit, such as numbers and categories, so we choose n_steps, n_ingredients, n_tags and we use categorical_steps. We choose decision tree regressor to predict the minutes because it could handle a variety of data types, including numerical, categorical, and ordinal. Besides, it is robust to outliers, which is common in the n_ingredients and n_steps columns. Moreover, it does not assume any relationship, either linear or colinear, enable us to better fits the datapoints. 
+Features types: Four of them are numerical, and one of them is categorical. 
+Numerical data, we use StandardScaler to normalize them. The reason is they have differenr ranges making it hard to compare on a scale. So we transform the data with a mean of 0 and a standard deviation of 1.  
+- n_steps:number of steps
+- n_ingredients:number of ingredients
+- n_tags: features we create from tags, potentially hinting the complexity
+- average_rating: this is a discrete numerical feature, so we need to normalize it as well
+
+Categorical data, we will one hot encoding it to a binary format to interprete the classfication.
+- categorical_steps: it has four unique columns, including 'very easy', 'easy', 'hard', 'very hard'.
+
+Metrics: r square, or the coeeficient of determination is a measurement of the quality of fitting, giving the proporiton of variance the model explains.
+
+Result: This model reach an accuracy of 93.5% on the train set, representing successfully fit 93.5% training data, which is really good. The testing score is 61% for the test set, meaning it explains 61% of the variance of theunseen data. Comparing to the high train score, the much lower test score has a moderate statistical significance but may lead to overfitting. Therefore, to improve the model's generalization to unseen data, we plan to including other features and refine the feature engineering process. 
+
 
 - Framing journey
 Taking inspiration from the example for the same we arrived at that feature(defined as one column)

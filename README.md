@@ -279,28 +279,14 @@ Result: This model reach an accuracy of 93.5% on the train set, representing suc
 
 ## Final Model
 
-obvious short comings of decision tree regressor on display overfitting :(
+For the final model, we add two more features, categorical_steps and the tags. The general reason is we want to incorporate more feature types but not only the numerical data and conduct different feature engineering methods such as one-hot encoding. 
 
+Categorical data, we will one hot encoding it to a binary format to interprete the classfication.
+- categorical_steps: it has four unique columns, including 'very easy', 'easy', 'hard', 'very hard'.
 
+Textual data: we will conduct a MultiLabelBinarizerTransformer on this feature. The transformer does a one-hot encoder similar function on the tags columns, which is a list of strings, after the transformation the lists of strings become a multilabel format, to make us easifer recognize different labels and count them either 0 or 1. The reason why we use this method is we notice tags take up a large space into the overall dataframe, and the column n_tags shows that each row has a mean of 245 tags. Therefore, we try to incorpate it into the analysis and the way to do one-hot encoding in such a large range would be MultiLabelBinarizerTransformer.
 
-lists_eval = ["tags","description"]
-Arriving at practical computation limits the only features that we're possible to add on any computer that I tried was tags and description. 
-Ingredients, nutrition , and for some reason steps weren't able to work under the multilabelbinarizer which in practice was simply a binary matrix but optimized for entry values with lists of data ["60 minutes", "15 minutes" ] etc. Although the model was able to train the all the tags alll of them being included would be shortsighted to the implications of colinearity due our being to predict the minutes or in other words if have variable that classifies the time. **Random Forest** may be able to make use of this fact due to the intervals of time suggested by the tags allowing for prediction that may be better suited for further iterations of the model.
-
-Description was also included due to the behavior we have witnessed earlier of the missingingness presented in the providing insight into the opinions of the participants who were reviewed. 
-
-scores : 
-
-
-in the example final they used segments of the tags they had cleaneed
-
-so 
-
-y=food_cleaned
-Standard normalized: n_steps, n_ingredients, number of tags, 
-vectorized description
-One_hot encoding: rating tags
-
+Result: it shows that we achieves a 99% of train score and a 94.6% test scores. Both of them are really high, meaning the accuracy is valid and our data is not overfitting. Even for the unseen data the model will work because the test_score is also high.
 
 ## Fairness Analysis
 

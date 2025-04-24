@@ -2,7 +2,7 @@
 
 **Name(s)**: Yixuan Xin, Felix Najera
 
-**Website Link**:[ (https://folicks.github.io/recipe_satisfaction/)]
+**Website Link**:[ (https://ivvvvvvvy123.github.io/recipe_satisfaction/)]
 
 ## introduction
 
